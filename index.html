@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Yiğit Seyyid Uçaroğlu | Backend Developer</title>
+  <meta name="description" content="C# ve .NET ile kurumsal web uygulamalarının backend tarafını geliştiren Backend Developer Yiğit Seyyid Uçaroğlu'nun portfolyosu.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Yiğit Seyyid Uçaroğlu | Backend Developer">
+  <meta property="og:description" content="C#, .NET, ASP.NET Core, Entity Framework Core ve SQL Server ile kurumsal web uygulamaları ve REST API'ler.">
+  <meta property="og:url" content="https://yigitucaroglu.github.io/">
+  <meta property="og:image" content="https://yigitucaroglu.github.io/assets/profile.jpg">
+  <meta name="color-scheme" content="light dark">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#icerik">İçeriğe geç</a>
+
+  <header class="site-header">
+    <nav class="nav" aria-label="Ana menü">
+      <a class="nav-brand" href="#">Yiğit Seyyid Uçaroğlu</a>
+      <ul class="nav-links">
+        <li><a href="#hakkimda">Hakkımda</a></li>
+        <li><a href="#projeler">Projeler</a></li>
+        <li><a href="#deneyim">Deneyim</a></li>
+        <li><a href="#yetenekler">Yetenekler</a></li>
+        <li><a href="#iletisim">İletişim</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="icerik">
+    <section class="hero" aria-labelledby="hero-baslik">
+      <img class="hero-photo" src="assets/profile.jpg" width="160" height="160" alt="Yiğit Seyyid Uçaroğlu">
+      <div class="hero-text">
+        <p class="eyebrow">Backend Developer</p>
+        <h1 id="hero-baslik">Yiğit Seyyid Uçaroğlu</h1>
+        <p class="lead">C# ve .NET ile kurumsal web uygulamalarının backend tarafını geliştiriyorum.</p>
+        <div class="actions">
+          <a class="button button-primary" href="assets/Yigit-Seyyid-Ucaroglu-CV.pdf" download>CV'yi indir</a>
+          <a class="button" href="https://github.com/yigitucaroglu" rel="noopener noreferrer">GitHub</a>
+          <a class="button" href="https://www.linkedin.com/in/yi%C4%9Fit-seyyid-u%C3%A7aro%C4%9Flu" rel="noopener noreferrer">LinkedIn</a>
+          <a class="button" href="mailto:yigitucaroglu@gmail.com">E-posta</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="hakkimda" class="section" aria-labelledby="hakkimda-baslik">
+      <h2 id="hakkimda-baslik">Hakkımda</h2>
+      <div class="prose">
+        <p>Kurumsal web uygulamalarının backend tarafını C# ve .NET ile geliştiriyorum. Yeni özellik geliştirmeden harici servis entegrasyonlarına, canlı ortam bakımından yayın süreçlerine kadar yazılımın farklı aşamalarında sorumluluk aldım.</p>
+        <p>Stajla başlayan kariyerimde uzak sunucu yönetimi, enerji tahmini, bayi ve operasyon yönetimi ve şirket içi iletişim gibi farklı alanlarda uygulamalar geliştirdim. ASP.NET Core, Entity Framework Core ve SQL Server ile REST API'ler geliştirdim; SignalR ile gerçek zamanlı iletişim, ödeme ve SMS entegrasyonları, yetkilendirme ve arka plan işlemleri üzerinde çalıştım. Canlı ortam sorunlarını log ve veritabanı analiziyle inceleyip kalıcı çözümler uyguladım.</p>
+        <p>Yeni bir özellik geliştirmek kadar çalışan bir sistemi sağlıklı tutmayı da önemsiyorum. Backend odaklı yeni fırsatlara açığım.</p>
+      </div>
+    </section>
+
+    <section id="projeler" class="section" aria-labelledby="projeler-baslik">
+      <h2 id="projeler-baslik">Projeler</h2>
+
+      <article class="card card-featured" aria-labelledby="proje-talep">
+        <div class="card-head">
+          <h3 id="proje-talep">Kurumsal Talep ve Onay Yönetim Sistemi</h3>
+          <p class="meta">Kişisel proje · GitHub'da herkese açık</p>
+        </div>
+        <p>Masraf, ekipman, izin ve diğer taleplerin yönetici onayından, yapılandırılabilir eşik tutarını aşanlarda ikinci seviye onaydan geçtiği rol bazlı (Çalışan, Yönetici, Admin) şirket içi talep yönetim sistemi.</p>
+        <ul class="highlights">
+          <li>Clean Architecture (Domain, Application, Infrastructure, Api, Web) ve MediatR ile CQRS</li>
+          <li>15 dakikalık JWT access token; her kullanımda yenilenen ve veritabanında yalnızca SHA-256 özeti saklanan refresh token</li>
+          <li>Token'ları tarayıcıda tutmayan Razor BFF katmanı ve HttpOnly cookie</li>
+          <li>API tarafında her istekte rol, kayıt sahipliği ve departman yöneticisi denetimi</li>
+          <li>Rate limiting, RowVersion ile optimistic concurrency, soft delete</li>
+          <li>Hassas değerleri maskeleyen transactional audit logging</li>
+          <li>260 unit ve 235 integration test; integration testler gerçek SQL Server üzerinde çalışır</li>
+        </ul>
+        <ul class="tags" aria-label="Kullanılan teknolojiler">
+          <li>.NET 8</li><li>ASP.NET Core Web API</li><li>EF Core</li><li>SQL Server</li><li>MediatR</li><li>xUnit</li><li>Swagger</li>
+        </ul>
+        <a class="link-arrow" href="https://github.com/yigitucaroglu/CorporateRequestManagement" rel="noopener noreferrer">GitHub'da incele</a>
+      </article>
+
+      <div class="card-grid">
+        <article class="card" aria-labelledby="proje-connect">
+          <div class="card-head">
+            <h3 id="proje-connect">Essa Connect – Şirket İçi İletişim Platformu</h3>
+            <p class="meta">Essa Bilişim Yazılım ve Danışmanlık · 2026</p>
+          </div>
+          <p>Birebir ve grup mesajlaşma, okundu bilgisi, çevrim içi durum ve bildirimler sunan kurumsal iletişim platformu. Backend .NET 10, ASP.NET Core Web API, SignalR, EF Core ve SQL Server ile; arka plan işlemleri Worker Service ve inbox/outbox yaklaşımıyla geliştirildi. React ve TypeScript web istemcisini Claude Code ve Codex ile yapay zekâ destekli geliştirdim.</p>
+          <p class="note">Şirket içi bir ürün olduğu için kaynak kodu ve ekran görüntüleri paylaşılmamaktadır.</p>
+        </article>
+
+        <article class="card" aria-labelledby="proje-bayi">
+          <div class="card-head">
+            <h3 id="proje-bayi">Bayi ve Operasyon Yönetim Platformu</h3>
+            <p class="meta">Freelance · 2026</p>
+          </div>
+          <p>Bayi, operasyon merkezi ve çözüm ortağı süreçlerini yöneten web platformu. ASP.NET Core MVC, EF Core ve SQL Server; claims tabanlı yetkilendirme, iyzico ödeme entegrasyonunda webhook doğrulama ve idempotency, NetGSM SMS entegrasyonu.</p>
+          <p class="note">Müşteri projesi olduğu için kaynak kodu paylaşılmamaktadır.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="deneyim" class="section" aria-labelledby="deneyim-baslik">
+      <h2 id="deneyim-baslik">Deneyim</h2>
+      <ol class="timeline">
+        <li>
+          <div class="timeline-head"><h3>Yazılım Geliştirici · Essa Bilişim Yazılım ve Danışmanlık</h3><span class="date">Ağustos 2026 – Ekim 2026</span></div>
+          <p>Essa Connect'in backend'ini .NET 10 ve ASP.NET Core Web API ile geliştirdim; ESSA Fleet'in bakımını, canlı ortam sorun analizini ve IIS yayınlarını yürüttüm.</p>
+        </li>
+        <li>
+          <div class="timeline-head"><h3>Freelance Yazılım Geliştirici</h3><span class="date">Şubat 2026 – Temmuz 2026</span></div>
+          <p>Bayi ve operasyon yönetim platformunu .NET 8, ASP.NET Core MVC, Entity Framework Core ve SQL Server ile geliştirdim.</p>
+        </li>
+        <li>
+          <div class="timeline-head"><h3>BT Departmanı Genç Yetenek · RHG Enertürk Enerji</h3><span class="date">Temmuz 2025 – Eylül 2025</span></div>
+          <p>Makine öğrenmesi destekli enerji tahmin sisteminin çıktılarını .NET 8 Blazor yönetim ekranlarına entegre ettim.</p>
+        </li>
+        <li>
+          <div class="timeline-head"><h3>BT Departmanı Analist Öğrenci · RHG Enertürk Enerji</h3><span class="date">Şubat 2025 – Haziran 2025</span></div>
+          <p>WinRM üzerinden uzak sunucuların merkezi yönetimini sağlayan ASP.NET Core MVC uygulamasını sıfırdan geliştirdim.</p>
+        </li>
+        <li>
+          <div class="timeline-head"><h3>BT Departmanı Stajyeri · ASPİLSAN Enerji</h3><span class="date">Temmuz 2024 – Ağustos 2024</span></div>
+          <p>Araç, ziyaretçi ve dış hizmet personeli kayıtlarının yönetildiği web uygulamasının geliştirilmesinde görev aldım.</p>
+        </li>
+      </ol>
+      <div class="education">
+        <h3>Eğitim</h3>
+        <p><strong>Bilgisayar Mühendisliği (Lisans)</strong> · Erciyes Üniversitesi · 2019 – 2025</p>
+      </div>
+    </section>
+
+    <section id="yetenekler" class="section" aria-labelledby="yetenekler-baslik">
+      <h2 id="yetenekler-baslik">Yetenekler</h2>
+      <dl class="skills">
+        <div><dt>Backend</dt><dd>C#, .NET 10, .NET 8, ASP.NET Core Web API, ASP.NET Core MVC, Entity Framework Core, LINQ, SignalR, Worker Service, REST API, OpenAPI</dd></div>
+        <div><dt>Veritabanı</dt><dd>Microsoft SQL Server, T-SQL, EF Core Migrations, MySQL</dd></div>
+        <div><dt>Güvenlik</dt><dd>Authentication, Authorization, Claims-Based Authorization, JWT, HMAC-SHA256, BCrypt, CSRF, CORS, Rate Limiting, Audit Logging</dd></div>
+        <div><dt>Mimari</dt><dd>Katmanlı Mimari, Clean Architecture, SOLID, Dependency Injection, CQRS, MediatR, Inbox/Outbox Pattern, Idempotency</dd></div>
+        <div><dt>Test</dt><dd>Unit Test, Integration Test, xUnit</dd></div>
+        <div><dt>Entegrasyon</dt><dd>Webhook, iyzico, NetGSM</dd></div>
+        <div><dt>Frontend</dt><dd>Blazor, Razor, HTML, CSS</dd></div>
+        <div><dt>Araçlar</dt><dd>Git, GitHub, Azure DevOps, IIS, Web Deploy, Visual Studio, Postman</dd></div>
+        <div><dt>Yapay zekâ destekli geliştirme</dt><dd>Claude Code, OpenAI Codex</dd></div>
+      </dl>
+    </section>
+
+    <section id="iletisim" class="section contact" aria-labelledby="iletisim-baslik">
+      <h2 id="iletisim-baslik">İletişim</h2>
+      <p>Backend odaklı yeni fırsatlara açığım. Bana en hızlı e-posta ile ulaşabilirsiniz.</p>
+      <div class="actions">
+        <a class="button button-primary" href="mailto:yigitucaroglu@gmail.com">yigitucaroglu@gmail.com</a>
+        <a class="button" href="https://www.linkedin.com/in/yi%C4%9Fit-seyyid-u%C3%A7aro%C4%9Flu" rel="noopener noreferrer">LinkedIn</a>
+        <a class="button" href="https://github.com/yigitucaroglu" rel="noopener noreferrer">GitHub</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 Yiğit Seyyid Uçaroğlu</p>
+  </footer>
+</body>
+</html>
