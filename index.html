@@ -57,44 +57,112 @@
     <section id="projeler" class="section" aria-labelledby="projeler-baslik">
       <h2 id="projeler-baslik">Projeler</h2>
 
-      <article class="card card-featured" aria-labelledby="proje-talep">
+      <article class="card card-featured" aria-labelledby="proje-connect">
         <div class="card-head">
-          <h3 id="proje-talep">Kurumsal Talep ve Onay Yönetim Sistemi</h3>
-          <p class="meta">Kişisel proje · GitHub'da herkese açık</p>
+          <p class="eyebrow">Öne çıkan proje</p>
+          <h3 id="proje-connect">Essa Connect – Şirket İçi İletişim Platformu</h3>
+          <p class="meta">Yazılım Geliştirici · Essa Bilişim Yazılım ve Danışmanlık · Ağustos 2026 – Ekim 2026</p>
         </div>
-        <p>Masraf, ekipman, izin ve diğer taleplerin yönetici onayından, yapılandırılabilir eşik tutarını aşanlarda ikinci seviye onaydan geçtiği rol bazlı (Çalışan, Yönetici, Admin) şirket içi talep yönetim sistemi.</p>
+        <p>Şirket çalışanları için birebir ve grup mesajlaşma, mesaj iletme, okundu bilgisi, çevrim içi durum ve bildirimler sunan kurumsal iletişim platformu. Backend geliştirici olarak API'leri ve arka plan işlemlerini geliştirdim; React ve TypeScript web istemcisini yapay zekâ destekli geliştirip backend'e entegre ettim.</p>
+        <figure class="diagram">
+          <svg viewBox="0 0 680 210" role="img" aria-label="Essa Connect genel mimarisi: web istemcisi, API, Application, Domain, Infrastructure, Worker Service ve harici servisler">
+            <defs>
+              <marker id="ok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="dg-arrowhead"/></marker>
+            </defs>
+            <g class="dg">
+              <rect class="dg-box" x="4" y="24" width="128" height="62" rx="8"/>
+              <text class="dg-title" x="68" y="50">Web istemcisi</text>
+              <text class="dg-sub" x="68" y="68">React · TypeScript</text>
+
+              <rect class="dg-box" x="200" y="14" width="150" height="82" rx="8"/>
+              <text class="dg-title" x="275" y="42">API</text>
+              <text class="dg-sub" x="275" y="60">ASP.NET Core Web API</text>
+              <text class="dg-sub" x="275" y="76">SignalR hub · .NET 10</text>
+
+              <rect class="dg-box dg-accent" x="400" y="24" width="150" height="62" rx="8"/>
+              <text class="dg-title" x="475" y="50">Application</text>
+              <text class="dg-sub" x="475" y="68">CQRS handler'ları</text>
+
+              <rect class="dg-box" x="586" y="24" width="90" height="62" rx="8"/>
+              <text class="dg-title" x="631" y="50">Domain</text>
+              <text class="dg-sub" x="631" y="68">iş kuralları</text>
+
+              <rect class="dg-box" x="400" y="140" width="150" height="62" rx="8"/>
+              <text class="dg-title" x="475" y="166">Infrastructure</text>
+              <text class="dg-sub" x="475" y="184">EF Core · SQL Server</text>
+
+              <rect class="dg-box" x="200" y="140" width="150" height="62" rx="8"/>
+              <text class="dg-title" x="275" y="166">Worker Service</text>
+              <text class="dg-sub" x="275" y="184">inbox/outbox · arka plan</text>
+
+              <rect class="dg-box dg-dashed" x="586" y="140" width="90" height="62" rx="8"/>
+              <text class="dg-title" x="631" y="162">Harici</text>
+              <text class="dg-sub" x="631" y="178">NetGSM SMS</text>
+              <text class="dg-sub" x="631" y="192">webhook'lar</text>
+
+              <line class="dg-line" x1="132" y1="46" x2="198" y2="46" marker-end="url(#ok)"/>
+              <text class="dg-label" x="165" y="38">REST</text>
+              <line class="dg-line dg-line-accent" x1="198" y1="70" x2="134" y2="70" marker-end="url(#ok)"/>
+              <text class="dg-label dg-label-accent" x="165" y="84">SignalR</text>
+              <line class="dg-line" x1="350" y1="55" x2="398" y2="55" marker-end="url(#ok)"/>
+              <line class="dg-line" x1="550" y1="55" x2="584" y2="55" marker-end="url(#ok)"/>
+              <line class="dg-line dg-line-dashed" x1="475" y1="140" x2="475" y2="88" marker-end="url(#ok)"/>
+              <text class="dg-label dg-left" x="482" y="118">soyutlamaları uygular</text>
+              <line class="dg-line" x1="350" y1="171" x2="398" y2="171" marker-start="url(#ok)" marker-end="url(#ok)"/>
+              <text class="dg-label" x="374" y="163">outbox</text>
+              <line class="dg-line" x1="550" y1="171" x2="584" y2="171" marker-start="url(#ok)" marker-end="url(#ok)"/>
+            </g>
+          </svg>
+          <figcaption>Genel katman yapısı. Şirkete özgü ayrıntılar bilerek gösterilmemiştir.</figcaption>
+        </figure>
         <ul class="highlights">
-          <li>Clean Architecture (Domain, Application, Infrastructure, Api, Web) ve MediatR ile CQRS</li>
-          <li>15 dakikalık JWT access token; her kullanımda yenilenen ve veritabanında yalnızca SHA-256 özeti saklanan refresh token</li>
-          <li>Token'ları tarayıcıda tutmayan Razor BFF katmanı ve HttpOnly cookie</li>
-          <li>API tarafında her istekte rol, kayıt sahipliği ve departman yöneticisi denetimi</li>
-          <li>Rate limiting, RowVersion ile optimistic concurrency, soft delete</li>
-          <li>Hassas değerleri maskeleyen transactional audit logging</li>
-          <li>260 unit ve 235 integration test; integration testler gerçek SQL Server üzerinde çalışır</li>
+          <li>SignalR ile gerçek zamanlı birebir ve grup mesajlaşma, mesaj iletme, okundu bilgisi ve çevrim içi durum</li>
+          <li>Command/query handler'larla CQRS; transaction ve idempotency kontrollü akışlar, böylece tekrarlanan bir istek ikinci kez kayıt oluşturmaz</li>
+          <li>Worker Service ile inbox/outbox tabanlı arka plan işlemleri; HMAC-SHA256 ile webhook doğrulama, NetGSM SMS</li>
+          <li>Rol ve izin bazlı yetkilendirme, CSRF koruması, rate limiting, audit logging; token'lar ve kişisel veriler log'lara ve tarayıcı depolamasına yazılmaz</li>
+          <li>Claude Code ve Codex ile, kurallar (ADR), kalite kontrolleri (lint, tip denetimi, test, build) ve kod incelemesiyle yönetilen geliştirme süreci</li>
         </ul>
         <ul class="tags" aria-label="Kullanılan teknolojiler">
-          <li>.NET 8</li><li>ASP.NET Core Web API</li><li>EF Core</li><li>SQL Server</li><li>MediatR</li><li>xUnit</li><li>Swagger</li>
+          <li>.NET 10</li><li>ASP.NET Core Web API</li><li>SignalR</li><li>Worker Service</li><li>EF Core</li><li>SQL Server</li><li>React</li><li>TypeScript</li>
         </ul>
-        <a class="link-arrow" href="https://github.com/yigitucaroglu/CorporateRequestManagement" rel="noopener noreferrer">GitHub'da incele</a>
+        <p class="note">Şirket içi bir ürün olduğu için kaynak kodu ve ekran görüntüleri paylaşılmamaktadır.</p>
       </article>
 
       <div class="card-grid">
-        <article class="card" aria-labelledby="proje-connect">
-          <div class="card-head">
-            <h3 id="proje-connect">Essa Connect – Şirket İçi İletişim Platformu</h3>
-            <p class="meta">Essa Bilişim Yazılım ve Danışmanlık · 2026</p>
-          </div>
-          <p>Birebir ve grup mesajlaşma, okundu bilgisi, çevrim içi durum ve bildirimler sunan kurumsal iletişim platformu. Backend .NET 10, ASP.NET Core Web API, SignalR, EF Core ve SQL Server ile; arka plan işlemleri Worker Service ve inbox/outbox yaklaşımıyla geliştirildi. React ve TypeScript web istemcisini Claude Code ve Codex ile yapay zekâ destekli geliştirdim.</p>
-          <p class="note">Şirket içi bir ürün olduğu için kaynak kodu ve ekran görüntüleri paylaşılmamaktadır.</p>
-        </article>
-
         <article class="card" aria-labelledby="proje-bayi">
           <div class="card-head">
             <h3 id="proje-bayi">Bayi ve Operasyon Yönetim Platformu</h3>
-            <p class="meta">Freelance · 2026</p>
+            <p class="meta">Freelance · Şubat 2026 – Temmuz 2026</p>
           </div>
-          <p>Bayi, operasyon merkezi ve çözüm ortağı süreçlerini yöneten web platformu. ASP.NET Core MVC, EF Core ve SQL Server; claims tabanlı yetkilendirme, iyzico ödeme entegrasyonunda webhook doğrulama ve idempotency, NetGSM SMS entegrasyonu.</p>
+          <p>Bayi, operasyon merkezi ve çözüm ortağı süreçlerini; üyelik, satış ve bakiye işlemlerini yöneten web platformu.</p>
+          <ul class="highlights">
+            <li>iyzico ödeme entegrasyonunda webhook doğrulama ve idempotency</li>
+            <li>Üyelik, satış kaydı ve bakiye düşümünü tek transaction içinde yöneten akışlar</li>
+            <li>Claims tabanlı yetkilendirme; BCrypt, SMS ile geçici parola, hesap kilitleme, oturum geçersiz kılma</li>
+            <li>Önizleme ve mükerrer kayıt kontrollü toplu veri aktarımı, audit logging</li>
+          </ul>
+          <ul class="tags" aria-label="Kullanılan teknolojiler">
+            <li>.NET 8</li><li>ASP.NET Core MVC</li><li>EF Core</li><li>SQL Server</li><li>iyzico</li><li>NetGSM</li>
+          </ul>
           <p class="note">Müşteri projesi olduğu için kaynak kodu paylaşılmamaktadır.</p>
+        </article>
+
+        <article class="card" aria-labelledby="proje-talep">
+          <div class="card-head">
+            <h3 id="proje-talep">Kurumsal Talep ve Onay Yönetim Sistemi</h3>
+            <p class="meta">Kişisel proje · Kodunu inceleyebileceğiniz proje</p>
+          </div>
+          <p>Talepleri yönetici onayından, eşik tutarını aşanlarda ikinci seviye onaydan geçiren rol bazlı şirket içi talep yönetim sistemi.</p>
+          <ul class="highlights">
+            <li>Clean Architecture ve MediatR ile CQRS</li>
+            <li>JWT ve her kullanımda yenilenen refresh token; token'ları tarayıcıda tutmayan Razor BFF</li>
+            <li>Rate limiting, optimistic concurrency, hassas değerleri maskeleyen audit logging</li>
+            <li>260 unit ve 235 integration test (xUnit)</li>
+          </ul>
+          <ul class="tags" aria-label="Kullanılan teknolojiler">
+            <li>.NET 8</li><li>ASP.NET Core Web API</li><li>MediatR</li><li>xUnit</li>
+          </ul>
+          <a class="link-arrow" href="https://github.com/yigitucaroglu/CorporateRequestManagement" rel="noopener noreferrer">GitHub'da incele</a>
         </article>
       </div>
     </section>

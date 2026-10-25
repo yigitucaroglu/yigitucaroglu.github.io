@@ -240,6 +240,34 @@ h3 {
 
 .link-arrow::after { content: " →"; }
 
+.diagram {
+  margin: 16px 0 4px;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--bg);
+}
+
+.diagram svg { display: block; width: 100%; height: auto; }
+
+.diagram figcaption { margin-top: 6px; font-size: 13px; color: var(--muted); }
+
+.dg { font-family: inherit; }
+.dg-box { fill: var(--surface); stroke: var(--border); stroke-width: 1.2; }
+.dg-accent { fill: color-mix(in srgb, var(--accent) 14%, var(--bg)); stroke: var(--accent); }
+.dg-dashed { fill: var(--bg); stroke-dasharray: 4 3; }
+.dg-title { fill: var(--text); font-size: 12px; font-weight: 700; text-anchor: middle; }
+.dg-sub { fill: var(--muted); font-size: 10.5px; text-anchor: middle; }
+.dg-label { fill: var(--muted); font-size: 9.5px; text-anchor: middle; }
+.dg-left { text-anchor: start; }
+.dg-label-accent { fill: var(--accent); }
+.dg-line { stroke: var(--muted); stroke-width: 1.5; }
+.dg-line-accent { stroke: var(--accent); }
+.dg-line-dashed { stroke-dasharray: 4 3; }
+.dg-arrowhead { fill: var(--muted); }
+
+.card-featured .eyebrow { font-size: 13px; text-transform: uppercase; letter-spacing: 0.06em; }
+
 .card-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -333,4 +361,8 @@ h3 {
   .card { padding: 20px; }
 
   .nav-links { font-size: 14px; }
+
+  /* Keep the diagram legible on phones: it scrolls inside its frame, the page does not */
+  .diagram { overflow-x: auto; }
+  .diagram svg { min-width: 620px; }
 }
